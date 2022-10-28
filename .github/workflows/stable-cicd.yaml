@@ -33,7 +33,7 @@ jobs:
             # build-push-action. C'est la vie.
             -
                 name: 💳 Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v3
                 with:
                     lfs: true
                     token: ${{secrets.ADMIN_GITHUB_TOKEN}}
