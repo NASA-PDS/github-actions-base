@@ -51,13 +51,11 @@ To make a release of this image on the [Docker Hub](https://hub.docker.com/), do
 But if you ever need to do that by hand, try this:
 
 ```console
-docker image build --tag github-actions-base:latest .
-docker image tag github-actions-base:latest nasapds/github-actions-base:latest
-docker login
-docker image push nasapds/github-actions-base:latest
+docker login --username nasapds
+docker buildx build --tag nasapds/github-actions-base:TAGNAME --platform linux/amd64,linux/arm64 --push .
 ```
 
-Substitute `:latest` with whatever's appropriate.
+Substitute `:TAGNAME` with whatever's appropriate.
 
 
 ## ⏰ Future Work
