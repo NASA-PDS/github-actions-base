@@ -24,12 +24,6 @@ ENV lxml=6.0.0
 ENV numpy=2.2.3
 ENV pandas=2.3.0
 ENV requests=2.32.4
-ENV sphinx_argparse=0.5.2
-ENV sphinx_copybutton=0.5.2
-ENV sphinx_rtd_theme=3.0.2
-ENV sphinx_substitution_extensions=2025.6.6
-ENV sphinx=8.2.3
-ENV sphinxcontrib_redoc=1.6.0
 ENV twine=6.1.0
 
 
@@ -78,10 +72,7 @@ RUN : &&\
 RUN : &&\
     pip install --quiet --upgrade pip setuptools wheel build &&\
     pip install --quiet github3.py==${github3_py} lxml==${lxml} numpy==${numpy} pandas==${pandas} &&\
-    pip install --quiet requests==${requests} sphinx_argparse==${sphinx_argparse} &&\
-    pip install --quiet sphinx_copybutton==${sphinx_copybutton} sphinx_rtd_theme==${sphinx_rtd_theme} &&\
-    pip install --quiet sphinx_substitution_extensions==${sphinx_substitution_extensions} sphinx==${sphinx} &&\
-    pip install --quiet sphinxcontrib_redoc==${sphinxcontrib_redoc} twine==${twine} &&\
+    pip install --quiet requests==${requests} twine==${twine} &&\
     :
 
 
